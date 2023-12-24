@@ -1,0 +1,13 @@
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-4" *ngFor="let item of items">
+            <div class="card shadow m-2" *ngIf="item.photoUrl != 'string'">
+                <img  [src]="item.photoUrl" [alt]="item.restaurantName">
+                <div class="card-body">
+                    <h5>{{item.restaurantName}}</h5>
+                    <small>{{item.description}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

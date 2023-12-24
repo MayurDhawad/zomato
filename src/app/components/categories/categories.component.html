@@ -1,0 +1,12 @@
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-2" *ngFor="let category of categories" (click)="navigate(category.categoryId)">
+            <div class="card shadow m-2" *ngIf="category.photoUrl != 'string'">
+                <img  [src]="category.photoUrl" [alt]="category.categoryName">
+                <div class="card-body">
+                    <h5>{{category.categoryName}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
